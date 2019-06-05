@@ -2,15 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ProductService } from './product.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CounterDirective } from './directives/counter.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CounterDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
